@@ -1,0 +1,17 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Cascadia+Code:ital,wght@0,200..700;1,200..700&family=DM+Serif+Text:ital@0;1&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lexend:wght@100..900&family=Manrope:wght@200..800&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nata+Sans:wght@100..900&family=Outfit:wght@100..900&family=Quicksand:wght@300..700&display=swap');
+
+*{
+     font-family: "Nata Sans", sans-serif;
+}
+
+.active{
+    color: rgb(227, 13, 195);
+    font-weight: 500;
+    border-bottom: 2px solid;
+    
+}
+.active:hover{
+    color: rgba(8, 177, 203, 0.839);
+    border-bottom: 2px solid;
+}
