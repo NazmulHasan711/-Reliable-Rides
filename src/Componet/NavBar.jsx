@@ -15,7 +15,7 @@ import { NavLink, Outlet } from "react-router-dom";
 function NavBar() {
   return (
     <>
-      <Navbar>
+      <Navbar className="flex justify-between">
         <NavbarBrand>
           <img src="Logo1.svg" alt="" />
         </NavbarBrand>
@@ -40,7 +40,7 @@ function NavBar() {
           </NavbarItem>
         </NavbarContent>
 
-        <NavbarContent justify="end" className="mt-3">
+        <NavbarContent justify="end" className="mt-3 ">
           <NavbarItem className=" lg:flex" justify="end">
             <NavLink to="login"><button className="bg-indigo-500 px-4 py-2 rounded-xl border-b-none text-white">Login</button></NavLink>
           </NavbarItem>
