@@ -15,42 +15,39 @@ import { NavLink, Outlet } from "react-router-dom";
 function NavBar() {
   return (
     <>
-      <Navbar className="flex justify-between">
-        <NavbarBrand>
-          <img src="Logo1.svg" alt="" />
-        </NavbarBrand>
-        <NavbarContent className="hidden sm:flex gap-4 bg-[#efeff7d5] px-6 rounded-xl py-3 mt-3" justify="center ">
-          <NavbarItem>
-            <NavLink to="/">Home</NavLink>
-          </NavbarItem>
-          <NavbarItem>
-            <NavLink to="nn">Used Cars</NavLink>
-          </NavbarItem>
-          <NavbarItem>
-            <NavLink to="v">Auctions</NavLink>
-          </NavbarItem>
-          <NavbarItem>
-            <NavLink to="c">Support</NavLink>
-          </NavbarItem>
-          <NavbarItem>
-            <NavLink to="p">Local Dealers</NavLink>
-          </NavbarItem>
-          <NavbarItem>
-            <NavLink to="z">Sell Cars</NavLink>
-          </NavbarItem>
-        </NavbarContent>
+      <Navbar maxWidth="full" className="px-4">
 
-        <NavbarContent justify="end" className="mt-3 ">
-          <NavbarItem className=" lg:flex" justify="end">
-            <NavLink to="login"><button className="bg-indigo-500 px-4 py-2 rounded-xl border-b-none text-white">Login</button></NavLink>
-          </NavbarItem>
-          <NavbarItem>
-            <Button justify="end" className="hidden lg:flex" color="primary" href="#" variant="flat">
-              Sign Up
-            </Button>
-          </NavbarItem>
-        </NavbarContent>
-      </Navbar>
+  <NavbarContent justify="start">
+    <NavbarMenuToggle className="sm:hidden mr-2" />
+    <NavbarBrand>
+      <img src="Logo1.svg" alt="Logo" className="h-8" />
+    </NavbarBrand>
+  </NavbarContent>
+
+ 
+  <NavbarContent className="hidden sm:flex gap-4 bg-[#efeff7d5] px-6 rounded-xl py-3 mt-3" justify="center">
+    <NavbarItem><NavLink to="/">Home</NavLink></NavbarItem>
+    <NavbarItem><NavLink to="nn">Used Cars</NavLink></NavbarItem>
+    <NavbarItem><NavLink to="v">Auctions</NavLink></NavbarItem>
+    <NavbarItem><NavLink to="c">Support</NavLink></NavbarItem>
+    <NavbarItem><NavLink to="p">Local Dealers</NavLink></NavbarItem>
+    <NavbarItem><NavLink to="z">Sell Cars</NavLink></NavbarItem>
+  </NavbarContent>
+
+ 
+  <NavbarContent justify="end">
+    <NavbarItem>
+      <NavLink to="login">
+        <button className="bg-indigo-500 px-5 py-2 rounded-xl text-white">Login</button>
+      </NavLink>
+    </NavbarItem>
+    <NavbarItem className="hidden lg:flex">
+      <Button as={NavLink} to="signup" color="primary" variant="flat">
+        Sign Up
+      </Button>
+    </NavbarItem>
+  </NavbarContent>
+</Navbar>
 
       <Outlet />
     </>
