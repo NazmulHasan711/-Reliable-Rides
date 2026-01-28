@@ -44,7 +44,7 @@ function BrandLogo() {
         <div className='grid grid-cols-2 md:grid-cols-3  gap-y-5'>
             {LogoItem.map((item ,i)=>(
                     <div key={i} className='flex gap-5 hover:transition-all duration-300 hover:bg-gray-50 hover:shadow-2xl hover:scale-105 rounded-2xl'>
-                        <img src={item.logo} alt="" />
+                        <img className='w-10' src={item.logo} alt="" />
                         <div>
                             <h1 className=' font-bold'>{item.name}</h1>
                             <p className='text-gray-500 font-semibold'>{item.price}</p>
